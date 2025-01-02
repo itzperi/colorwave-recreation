@@ -20,6 +20,7 @@ const Header = () => {
             <a href="#" className="text-white hover:text-raastas-light transition-colors">Research</a>
             <a href="#" className="text-white hover:text-raastas-light transition-colors">Blog</a>
             <a href="#" className="text-white hover:text-raastas-light transition-colors">News</a>
+            
           </div>
 
           {/* Mobile menu button */}
