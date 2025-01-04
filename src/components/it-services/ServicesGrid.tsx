@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { 
   Database, Code, Smartphone, Server, Shield, Users,
   Settings, Terminal, FileCode, BarChart, Network, Lock,
-  MonitorSmartphone, Cog, Download, FileJson, ApiIcon, HardDrive
+  MonitorSmartphone, Cog, Download, FileJson, PiIcon, HardDrive
 } from "lucide-react";
 import ServiceCard from "./ServiceCard";
 
@@ -99,7 +99,7 @@ const ServicesGrid = () => {
       description: "Develop intuitive products that make real problems go away. We develop applications-from mobile to desktop-that connect people and businesses. Let's create something amazing."
     },
     {
-      icon: <ApiIcon />, // Changed from Api to ApiIcon
+      icon: <PiIcon />,
       title: "API Development",
       description: "Connect systems. Simplify processes with great APIs. Make data sharing easier and more secure. Let's improve your connectivity today."
     },
