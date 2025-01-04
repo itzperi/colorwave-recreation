@@ -12,7 +12,7 @@ const industries = [
   { icon: "/lovable-uploads/e7f04bd7-61d4-4d9b-b5ba-1b999a6bcf48.png", title: "Finance & FinTech" },
   { icon: "/lovable-uploads/e930c640-e640-46e3-b4b9-4ef173444604.png", title: "Blockchain, Crypto & NFTs" },
   { icon: "/lovable-uploads/59867043-b643-4088-82ba-272650322f21.png", title: "Energy, Oil & Gas" },
-  { icon: "/lovable-uploads/089348ff-56c6-4199-8c33-293df268dfe0.png", title: "Hospitality" }
+  { icon: "/lovable-uploads/8561085a-c9f3-46a5-bde9-5d6bfc3a75e8.png", title: "Hospitality" }
 ];
 
 const Industries = () => {

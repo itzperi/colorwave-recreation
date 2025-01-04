@@ -31,7 +31,7 @@ const serviceCategories = [
   },
   {
     title: "Advertising",
-    icon: "/lovable-uploads/2cd8be13-9eab-4e32-a456-4d5b360cc11c.png",
+    icon: "/lovable-uploads/79262811-c5be-4004-a8ca-31b0bd63534c.png",
     services: [
       "Paid Media Campaigns",
       "PPC Marketing",

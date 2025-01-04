@@ -2,20 +2,9 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 const Brands = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
-  const ref = useRef<HTMLDivElement>(null);
-
-  const handleMouseMove = (e: MouseEvent) => {
-    const { left, top } = ref.current?.getBoundingClientRect() || { left: 0, top: 0 };
-    mouseX.set(e.clientX - left);
-    mouseY.set(e.clientY - top);
-  };
-
-  useEffect(() => {
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
 
   const brands = [
     { src: "/lovable-uploads/484f9fb0-4107-4356-b10d-3e315a1634d3.png", alt: "Coca-Cola" },
@@ -27,6 +16,17 @@ const Brands = () => {
     { src: "/lovable-uploads/b6acbd12-e2bc-48e8-9323-92708785b8d4.png", alt: "Pepsi" },
     { src: "/lovable-uploads/d2dc5b58-0d94-468e-9892-4f07b787cfae.png", alt: "Hyundai" },
   ];
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const { left, top } = containerRef.current?.getBoundingClientRect() || { left: 0, top: 0 };
+      mouseX.set(e.clientX - left);
+      mouseY.set(e.clientY - top);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, [mouseX, mouseY]);
 
   return (
     <div className="py-20 bg-[#F3F0FF] overflow-hidden">
@@ -41,29 +41,41 @@ const Brands = () => {
         </h2>
         
         <div 
-          ref={ref}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center justify-items-center relative"
+          ref={containerRef}
+          className="relative"
         >
-          {brands.map((brand, index) => {
-            const x = useSpring(useTransform(mouseX, [0, 1000], [0, 30 * (index % 4 - 1.5)]));
-            const y = useSpring(useTransform(mouseY, [0, 1000], [0, 30 * (Math.floor(index / 4) - 1)]));
+          <motion.div 
+            className="flex space-x-16 items-center"
+            animate={{ x: [0, -1920] }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 20,
+                ease: "linear",
+              },
+            }}
+          >
+            {[...brands, ...brands].map((brand, index) => {
+              const x = useSpring(useTransform(mouseX, [0, 1000], [0, 30]));
+              const y = useSpring(useTransform(mouseY, [0, 1000], [0, 30]));
 
-            return (
-              <motion.div
-                key={brand.alt}
-                style={{ x, y }}
-                whileHover={{ scale: 1.1 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                className="w-32 md:w-40 h-20 flex items-center justify-center filter hover:brightness-110 transition-all duration-300"
-              >
-                <img
-                  src={brand.src}
-                  alt={brand.alt}
-                  className="w-full h-full object-contain"
-                />
-              </motion.div>
-            );
-          })}
+              return (
+                <motion.div
+                  key={`${brand.alt}-${index}`}
+                  style={{ x, y }}
+                  whileHover={{ scale: 1.1 }}
+                  className="w-32 md:w-40 h-20 flex-shrink-0"
+                >
+                  <img
+                    src={brand.src}
+                    alt={brand.alt}
+                    className="w-full h-full object-contain"
+                  />
+                </motion.div>
+              );
+            })}
+          </motion.div>
         </div>
       </motion.div>
     </div>
