@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <div 
       className="bg-cover bg-center min-h-screen relative"
@@ -47,7 +50,6 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="grid md:grid-cols-3 gap-8"
         >
-          {/* Marketing Agency Card */}
           <div className="p-8 rounded-lg bg-opacity-10 bg-white backdrop-blur-lg border border-white/10 hover:border-raastas-light/50 transition-all duration-300">
             <div className="mb-4">
               <h3 className="text-xl font-semibold text-white mb-2">Marketing Agency</h3>
@@ -55,12 +57,14 @@ const Hero = () => {
                 Boost your business with our neuromarketing-powered Marketing services. We provide SEO, consumer insights, data-driven campaigns, and a full range of marketing solutions.
               </p>
             </div>
-            <a href="#" className="text-raastas-light hover:text-raastas-accent transition-colors">
+            <button 
+              onClick={() => navigate('/marketing-agency')}
+              className="text-raastas-light hover:text-raastas-accent transition-colors"
+            >
               Explore →
-            </a>
+            </button>
           </div>
 
-          {/* Creative Solutions Card */}
           <div className="p-8 rounded-lg bg-opacity-10 bg-white backdrop-blur-lg border border-white/10 hover:border-raastas-light/50 transition-all duration-300">
             <div className="mb-4">
               <h3 className="text-xl font-semibold text-white mb-2">Creative Solutions</h3>
@@ -68,12 +72,14 @@ const Hero = () => {
                 Elevate your brand with our creative solutions, blending the science of behavior and the art of design to influence decisions and drive engagement.
               </p>
             </div>
-            <a href="#" className="text-raastas-light hover:text-raastas-accent transition-colors">
+            <button 
+              onClick={() => navigate('/creative-solutions')}
+              className="text-raastas-light hover:text-raastas-accent transition-colors"
+            >
               Explore →
-            </a>
+            </button>
           </div>
 
-          {/* IT Services Card */}
           <div className="p-8 rounded-lg bg-opacity-10 bg-white backdrop-blur-lg border border-white/10 hover:border-raastas-light/50 transition-all duration-300">
             <div className="mb-4">
               <h3 className="text-xl font-semibold text-white mb-2">IT Services</h3>
@@ -81,9 +87,12 @@ const Hero = () => {
                 From concept to deployment, we provide end-to-end software development for internal applications or market-ready products.
               </p>
             </div>
-            <a href="#" className="text-raastas-light hover:text-raastas-accent transition-colors">
+            <button 
+              onClick={() => navigate('/it-services')}
+              className="text-raastas-light hover:text-raastas-accent transition-colors"
+            >
               Explore →
-            </a>
+            </button>
           </div>
         </motion.div>
       </div>
