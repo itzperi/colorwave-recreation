@@ -4,30 +4,29 @@ const HeroSection = () => {
   return (
     <div 
       className="min-h-screen bg-cover bg-center relative"
-      style={{ 
-        backgroundImage: `url('/lovable-uploads/29495d47-d464-4a6a-b453-72f50e4f74f5.png')`
-      }}
+      style={{ backgroundImage: `url('/lovable-uploads/3828cc54-cf71-472b-bd45-e01749966b9b.png')` }}
     >
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50" />
       <div className="container mx-auto px-4 relative z-10 pt-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center max-w-4xl mx-auto"
+          className="max-w-4xl"
         >
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             IT Services
           </h1>
-          <p className="text-lg text-gray-200 mb-8">
-            Whether it's system integration, network security, cloud services, or software development, 
-            we make sure your business runs smoothly, effectively, and safely.
+          <p className="text-xl text-gray-200 mb-8">
+            Discover the full potential of your business and enhance your operations with our top-notch IT services. Our skilled team focuses on delivering creative and tailored IT solutions that help your organization succeed in a constantly changing tech environment.
           </p>
-          <p className="text-gray-300">
-            Our extensive experience and dedication to quality enable us to help businesses like yours utilize 
-            technology for lasting growth and success. Collaborate with us to create a robust IT infrastructure 
-            that enhances productivity and keeps you ahead of your competitors.
-          </p>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-[#6366F1] text-white px-8 py-3 rounded-lg hover:bg-[#4F46E5] transition-colors"
+          >
+            Let's Get Started
+          </motion.button>
         </motion.div>
       </div>
     </div>
