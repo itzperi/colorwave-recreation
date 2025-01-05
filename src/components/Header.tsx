@@ -44,7 +44,7 @@ const Header = () => {
             <img
               src="/lovable-uploads/94226ab9-122b-4ace-b2e0-2c4ca37d51c4.png"
               alt="Nimais Logo"
-              className="h-16 w-auto" // Increased height from h-8 to h-16
+              className="h-24 w-auto" // Increased height from h-16 to h-24
             />
           </div>
 

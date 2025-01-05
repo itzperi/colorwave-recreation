@@ -7,11 +7,18 @@ const Brands = () => {
   const mouseY = useMotionValue(0);
 
   const brands = [
+    // Existing brands
     { src: "/lovable-uploads/544d7b65-566b-4657-a223-29c08cdfafb4.png", alt: "Brand X" },
     { src: "/lovable-uploads/8d50e6d3-810f-4689-9d54-2875a51187b0.png", alt: "Netflix" },
     { src: "/lovable-uploads/957c2345-68ab-4378-bddd-dd7f3cc7f558.png", alt: "HBO" },
     { src: "/lovable-uploads/fd72e4f1-e0eb-4484-9c43-6d7e9837d1ca.png", alt: "PayPal" },
     { src: "/lovable-uploads/0e89f90f-2ae2-416c-944b-6bcce2838119.png", alt: "Nike" },
+    // New brands
+    { src: "/lovable-uploads/94226ab9-122b-4ace-b2e0-2c4ca37d51c4.png", alt: "Brand 13" },
+    { src: "/lovable-uploads/b1b642fb-86fd-47e6-a90e-c1f83b2ce4e5.png", alt: "Brand 14" },
+    { src: "/lovable-uploads/c0490498-6065-453f-a000-fad9b611cb92.png", alt: "Brand 15" },
+    { src: "/lovable-uploads/e96bb06b-a586-4c54-9ef3-ee7dc12d7e8a.png", alt: "Brand 17" },
+    { src: "/lovable-uploads/f5d4da2e-dcd4-4a71-b23d-9352a2ce365e.png", alt: "Brand 18" },
   ];
 
   useEffect(() => {
@@ -42,13 +49,13 @@ const Brands = () => {
           className="relative"
         >
           <motion.div 
-            className="flex space-x-32 items-center" // Increased gap between brands
-            animate={{ x: [0, -1920] }}
+            className="flex space-x-40 items-center" // Increased gap between brands
+            animate={{ x: [0, -2400] }} // Increased animation width for more brands
             transition={{
               x: {
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: 30, // Slower animation
+                duration: 40, // Slower animation
                 ease: "linear",
               },
             }}
@@ -62,7 +69,7 @@ const Brands = () => {
                   key={`${brand.alt}-${index}`}
                   style={{ x, y }}
                   whileHover={{ scale: 1.1 }}
-                  className="w-40 md:w-48 h-24 flex-shrink-0" // Increased size
+                  className="w-48 md:w-56 h-32 flex-shrink-0" // Increased size
                 >
                   <img
                     src={brand.src}
