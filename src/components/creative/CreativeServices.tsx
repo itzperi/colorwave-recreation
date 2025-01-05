@@ -2,44 +2,59 @@ import { motion } from "framer-motion";
 
 const services = [
   {
-    icon: "/lovable-uploads/ebd16fdb-78a7-4e2a-a918-fd84d21a87ce.png",
+    icon: "/lovable-uploads/95f47f80-2a86-4a15-87e2-2ecf353a839b.png",
     title: "Brand and Identity",
-    description: "Your name is the face of your business. A strong brand identity contributes largely to trust, acceptance, and recognition."
+    description: "Your name is the face of your business. A strong brand identity contributes largely to trust, acceptance, and recognition. Nimais provides personalized design services to ensure your brand looks unique across all platforms, creating a lasting experience with your audience."
   },
   {
-    icon: "/lovable-uploads/ec109d9c-26a1-4970-a8bb-d931efa8be1b.png",
+    icon: "/lovable-uploads/c83f4aa6-3e88-4729-a6d3-3a2485bf94a3.png",
     title: "Business and Advertising",
-    description: "We create presentations and advertising designs that leave a lasting impression. We captivate your audience, grab their attention, and communicate your message clearly."
+    description: "Nimais creates presentations and advertising designs that leave a lasting impression. We captivate your audience, grab their attention, and communicate your message clearly to keep them engaged with your brand."
   },
   {
-    icon: "/lovable-uploads/e0e231d4-b11a-4683-a7b5-0b9a9ed22b46.png",
+    icon: "/lovable-uploads/fba6acc4-eccb-4b88-93d1-a7fe5ea94b8a.png",
     title: "Packaging and Label",
-    description: "We create packaging that serves as a powerful marketing tool. With the right design, your product will stand out on the shelves and attract your ideal customer."
+    description: "Nimais creates packaging that serves as a powerful marketing tool. With the right design, your product will stand out on the shelves and attract your ideal customer, while also adding appeal and protection. Let us make your packaging memorable!"
   },
   {
-    icon: "/lovable-uploads/786dae31-2691-48a6-bf95-b33c48c14177.png",
+    icon: "/lovable-uploads/96f480b3-999b-4e50-b785-ca8bbcc6c2b7.png",
     title: "Website & App",
-    description: "We understand that your website and app are key to your digital presence. Whether it's a landing page, app design, or banner ads, we create designs that connect."
+    description: "Nimais understands that your website and app are key to your digital presence. Whether it's a landing page, app design, or banner ads, we create designs that connect with your audience and elevate your brand."
   },
   {
-    icon: "/lovable-uploads/23cd5fe8-95c0-40ec-ab05-edc4153f9891.png",
+    icon: "/lovable-uploads/d132b28a-ecf7-4270-a834-cb1f8aa676fc.png",
     title: "Social Media Design",
-    description: "We create visuals and a unified brand identity that resonate with your audience and enhance your online presence."
+    description: "Nimais knows that your brand's impact on social media starts with strong design. We create visuals and a unified brand identity that resonate with your audience and enhance your online presence."
   },
   {
-    icon: "/lovable-uploads/50f9ce5c-cfde-4383-9a6a-2c71af4c0bfe.png",
+    icon: "/lovable-uploads/bdce1d3c-4c73-403d-80e3-b32c4366a027.png",
     title: "Book & Magazine",
-    description: "We turn your stories and ideas into visually captivating books and magazines. We bring creativity and precision to our designs, ensuring they capture attention."
+    description: "Nimais turns your stories and ideas into visually captivating books and magazines. We bring creativity and precision to our designs, ensuring they capture attention and engage readers."
   },
   {
+    icon: "/lovable-uploads/c1f46c25-f479-437b-a5cf-8bb132a99111.png",
     title: "Content Writing Agency",
-    description: "We create high-quality content that drives business success. From blog writing to SEO copy, we craft content that informs, engages, and converts your audience.",
-    icon: "/lovable-uploads/fd0e5d9f-8d22-4096-badb-e989c3ca3f22.png"
+    description: "Nimais creates high-quality content that drives business success. From blog writing to SEO copy, we craft content that informs, engages, and converts your audience."
   },
   {
+    icon: "/lovable-uploads/c8ac28cb-6640-4811-8187-95dcf76a1f05.png",
     title: "Video Production Service",
-    description: "We create high-quality videos that bring your brand's vision to life. From product promotions to social media content, we combine creativity and technology.",
-    icon: "/lovable-uploads/96b118a2-83e2-4095-a55d-455d4f561a63.png"
+    description: "Nimais creates high-quality videos that bring your brand's vision to life. From product promotions to social media content, we combine creativity and technology to craft impactful stories that meet your business needs"
+  },
+  {
+    icon: "/lovable-uploads/e96bb06b-a586-4c54-9ef3-ee7dc12d7e8a.png",
+    title: "Illustration & Art",
+    description: "Nimais brings your ideas to life with imaginative and creative illustrations that connect with your audience. Whether it's for personal projects or professional branding, our art goes beyond the ordinary to make a lasting impression."
+  },
+  {
+    icon: "/lovable-uploads/206ebc38-556c-400a-a957-a561c8112654.png",
+    title: "Clothing and Merchandise",
+    description: "Nimais offers unforgettable custom designs for clothing and merchandise, including stickers, t-shirts, bags, and more. Our powerful artwork speaks directly to your audience and makes a lasting impact."
+  },
+  {
+    icon: "/lovable-uploads/6aae43dd-2f95-4ec9-8418-0a947f0936b7.png",
+    title: "Design",
+    description: "Nimais creates designs that connect people to your brand. We craft meaningful visuals that tell your story, build trust, and engage your audience. Let us help your brand stand out and achieve real results."
   }
 ];
 

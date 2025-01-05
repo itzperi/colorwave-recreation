@@ -42,8 +42,8 @@ const Header = () => {
         <div className="flex items-center justify-between py-4 border-t border-gray-700">
           <div className="flex items-center">
             <img
-              src="/lovable-uploads/c0f3b15e-060f-4cf6-bc73-70ce9b758695.png"
-              alt="Raastas Logo"
+              src="/lovable-uploads/36d712a7-414b-4f7a-8c90-0ca963ded12c.png"
+              alt="Nimais Logo"
               className="h-8 w-auto"
             />
           </div>

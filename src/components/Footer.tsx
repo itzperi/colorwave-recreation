@@ -11,11 +11,11 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
             className="col-span-1"
           >
-            <img src="/lovable-uploads/c0f3b15e-060f-4cf6-bc73-70ce9b758695.png" alt="Raastas Logo" className="h-8 mb-6" />
+            <img src="/lovable-uploads/36d712a7-414b-4f7a-8c90-0ca963ded12c.png" alt="Nimais Logo" className="h-8 mb-6" />
             <p className="text-sm mb-4">
               At Raastas, we are neuromarketing experts offering comprehensive digital marketing services to accelerate your business growth. By combining neuroscience insights with proven strategies, we enhance engagement, drive conversions, and build brand loyalty. Our services include SEO, content creation, data analytics, and tailored solutions. Additionally, we provide IT solutions, making us your all-in-one partner for digital success.
             </p>
-            <p className="text-sm mb-2">Email: info@raastas.com</p>
+            <p className="text-sm mb-2">Email: info@nimais.com</p>
             <p className="text-sm">
               Address: #28 1st floor, 1st Main Shivshankar Layout Khattigenhalli Yelahanka Bangalore 562114
             </p>
