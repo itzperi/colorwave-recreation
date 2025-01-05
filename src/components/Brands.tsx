@@ -7,14 +7,11 @@ const Brands = () => {
   const mouseY = useMotionValue(0);
 
   const brands = [
-    { src: "/lovable-uploads/484f9fb0-4107-4356-b10d-3e315a1634d3.png", alt: "Coca-Cola" },
-    { src: "/lovable-uploads/f5d4da2e-dcd4-4a71-b23d-9352a2ce365e.png", alt: "PepsiCo" },
-    { src: "/lovable-uploads/7823b77e-587c-473d-89b3-9d4c6cd7f3c9.png", alt: "Mercedes" },
-    { src: "/lovable-uploads/066c9235-68ac-449e-84da-3070ead75196.png", alt: "Google" },
-    { src: "/lovable-uploads/ffab2ed1-6629-4e5d-93b7-e31ebc70234f.png", alt: "Apple" },
-    { src: "/lovable-uploads/453c59b6-f0a0-42e1-9035-30e34c852853.png", alt: "Microsoft" },
-    { src: "/lovable-uploads/b6acbd12-e2bc-48e8-9323-92708785b8d4.png", alt: "Pepsi" },
-    { src: "/lovable-uploads/d2dc5b58-0d94-468e-9892-4f07b787cfae.png", alt: "Hyundai" },
+    { src: "/lovable-uploads/544d7b65-566b-4657-a223-29c08cdfafb4.png", alt: "Brand X" },
+    { src: "/lovable-uploads/8d50e6d3-810f-4689-9d54-2875a51187b0.png", alt: "Netflix" },
+    { src: "/lovable-uploads/957c2345-68ab-4378-bddd-dd7f3cc7f558.png", alt: "HBO" },
+    { src: "/lovable-uploads/fd72e4f1-e0eb-4484-9c43-6d7e9837d1ca.png", alt: "PayPal" },
+    { src: "/lovable-uploads/0e89f90f-2ae2-416c-944b-6bcce2838119.png", alt: "Nike" },
   ];
 
   useEffect(() => {
@@ -45,13 +42,13 @@ const Brands = () => {
           className="relative"
         >
           <motion.div 
-            className="flex space-x-16 items-center"
+            className="flex space-x-32 items-center" // Increased gap between brands
             animate={{ x: [0, -1920] }}
             transition={{
               x: {
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: 20,
+                duration: 30, // Slower animation
                 ease: "linear",
               },
             }}
@@ -65,7 +62,7 @@ const Brands = () => {
                   key={`${brand.alt}-${index}`}
                   style={{ x, y }}
                   whileHover={{ scale: 1.1 }}
-                  className="w-32 md:w-40 h-20 flex-shrink-0"
+                  className="w-40 md:w-48 h-24 flex-shrink-0" // Increased size
                 >
                   <img
                     src={brand.src}

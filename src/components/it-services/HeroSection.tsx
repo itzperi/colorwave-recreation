@@ -4,7 +4,7 @@ const HeroSection = () => {
   return (
     <div 
       className="min-h-screen bg-cover bg-center relative"
-      style={{ backgroundImage: `url('/lovable-uploads/3828cc54-cf71-472b-bd45-e01749966b9b.png')` }}
+      style={{ backgroundImage: `url('/lovable-uploads/2e28b456-a51b-4e98-87d2-49d60d959e27.png')` }}
     >
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50" />
       <div className="container mx-auto px-4 relative z-10 pt-32">
@@ -15,7 +15,7 @@ const HeroSection = () => {
           className="max-w-4xl"
         >
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            IT Services
+            IT services
           </h1>
           <p className="text-xl text-gray-200 mb-8">
             Discover the full potential of your business and enhance your operations with our top-notch IT services. Our skilled team focuses on delivering creative and tailored IT solutions that help your organization succeed in a constantly changing tech environment.
