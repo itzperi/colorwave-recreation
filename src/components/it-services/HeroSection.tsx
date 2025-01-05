@@ -4,7 +4,7 @@ const HeroSection = () => {
   return (
     <div 
       className="min-h-screen bg-cover bg-center relative"
-      style={{ backgroundImage: `url('/lovable-uploads/2e28b456-a51b-4e98-87d2-49d60d959e27.png')` }}
+      style={{ backgroundImage: `url('/lovable-uploads/ca9abf27-4fe3-45a1-9e2a-0603a348f8db.png')` }}
     >
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50" />
       <div className="container mx-auto px-4 relative z-10 pt-32">
