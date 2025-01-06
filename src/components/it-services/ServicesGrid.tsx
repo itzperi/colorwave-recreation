@@ -2,95 +2,89 @@ import { motion } from "framer-motion";
 
 const services = [
   {
-    icon: "/lovable-uploads/6dbd3fa1-99d3-4243-b904-34d11d028d11.png",
+    icon: "/lovable-uploads/b72bef5d-7070-4fc0-86bd-6932d3f0b4f1.png",
     title: "Custom Software Development",
     description: "Get custom software designed for your unique business needs. Automate processes, boost efficiency, and stay future-ready."
   },
   {
-    icon: "/lovable-uploads/7d88d850-ba42-4d9f-86b1-2fbc859505d7.png",
+    icon: "/lovable-uploads/9021b316-1198-4845-a2ef-1400f0ae4abc.png",
     title: "IT Consulting & Advisory",
     description: "Got tech questions? We've got answers. Our experts provide practical solutions aligned with your goals."
   },
   {
-    icon: "/lovable-uploads/6ebb0de0-ba23-470c-89db-388ac3f6c42c.png",
+    icon: "/lovable-uploads/88f4137c-53e1-45f0-91e1-e9d408be6f00.png",
     title: "Digital Transformation",
     description: "Simplify your operations with upgraded digital tools. Work smarter, please your customers, and stay ahead."
   },
-  // ... Add all other services with their respective icons
   {
-    icon: "/lovable-uploads/23cbff75-2f14-4427-82b6-b58a4d0d60ff.png",
+    icon: "/lovable-uploads/fbd0669f-0a37-4e99-a16e-7d6959c3556a.png",
     title: "Software Testing & QA",
-    description: "Ensure your software works perfectly through thorough testing and troubleshooting. Deliver a seamless user experience every time."
+    description: "Ensure your software works perfectly through thorough testing and troubleshooting."
   },
   {
-    icon: "/lovable-uploads/a6b6b733-ab9d-441d-9163-d31002dc04d7.png",
+    icon: "/lovable-uploads/8d7be412-8abf-4862-ac1a-450e819e9f2c.png",
     title: "Data Analysis & Reporting",
-    description: "Transform complex data into simple insights for smarter decisions. Unlock your data's full potential."
+    description: "Transform complex data into simple insights for smarter decisions."
   },
   {
-    icon: "/lovable-uploads/2cb559c4-2e06-418d-a2fa-7b83d87acf04.png",
+    icon: "/lovable-uploads/af0e82ab-db2e-43f1-902b-ce2ef3fcdf84.png",
     title: "IT Resource Management",
-    description: "Maximize the value of your IT investments. Align people and technology for results without overspending."
+    description: "Maximize the value of your IT investments. Align people and technology for results."
   },
   {
-    icon: "/lovable-uploads/352dd909-3af5-4e1c-aa21-88eb33c15d33.png",
+    icon: "/lovable-uploads/4d848b18-b062-482e-8d1f-de3c3b57638c.png",
     title: "Technical Support",
-    description: "Tech Trouble? No Problem. Keep the business running and deal with your tech troubles in no time."
+    description: "Tech Trouble? No Problem. Keep your business running smoothly."
   },
   {
-    icon: "/lovable-uploads/7a833953-7d9f-4249-b661-e8a0e1f07bcb.png",
+    icon: "/lovable-uploads/73b069b9-a71d-47a7-8068-96809805d4bc.png",
     title: "Customer Experience Solutions",
-    description: "Create more efficient, better customer contact to build loyalty. Get ahead of your competition so that your customers are satisfied."
+    description: "Create more efficient, better customer contact to build loyalty."
   },
   {
-    icon: "/lovable-uploads/16e4a4e4-f39d-4cc0-9630-e27d206856c4.png",
+    icon: "/lovable-uploads/4c7dddfb-205e-46eb-861e-3cfc11a15d4d.png",
     title: "Infrastructure Management",
     description: "Ensure smooth, uninterrupted working on your servers and network."
   },
   {
-    icon: "/lovable-uploads/f418294f-ed3e-4979-8173-588b7f031dc1.png",
+    icon: "/lovable-uploads/c4121a6c-f059-4f11-97ac-9a7360157711.png",
     title: "Application Maintenance",
     description: "Helping keep your applications secure, up to date, and ready for change."
   },
   {
-    icon: "/lovable-uploads/d2a2dad2-e31f-4373-b96f-b30be6ae5481.png",
+    icon: "/lovable-uploads/c75b09ee-6ee4-43fe-9350-53f3a541d442.png",
     title: "Cybersecurity & Risk Management",
-    description: "Protect your business from cyber threats with state-of-the-art security measures."
+    description: "Protect your business from cyber threats with state-of-the-art security."
   },
   {
-    icon: "/lovable-uploads/a8b1c73a-c266-4cc8-bd8f-d3d8ae64486a.png",
+    icon: "/lovable-uploads/6b0c5e68-3438-4141-8aaf-fc42ae05d310.png",
     title: "Compliance Support",
-    description: "Ensure that your business meets all the regulatory requirements through expert compliance guidance."
+    description: "Ensure your business meets all regulatory requirements through expert guidance."
   },
   {
-    icon: "/lovable-uploads/c4e6d751-1b06-40ef-a3b5-766f5aa55861.png",
+    icon: "/lovable-uploads/fa20076b-5883-4633-8aa1-4e984e06a91c.png",
     title: "Software Maintenance",
-    description: "Maintain your software in fantastic running conditions with timely updates and fixes."
+    description: "Maintain your software in fantastic running conditions with timely updates."
   },
   {
-    icon: "/lovable-uploads/efbd7c41-6a68-4a24-aeea-252601bc85eb.png",
+    icon: "/lovable-uploads/e9dc3a9d-4eb5-4bb4-8cdd-5af902113997.png",
     title: "Software Modernization",
-    description: "Upgrade your legacy systems to modern standards. Make your software faster, safer, and future-proof."
+    description: "Upgrade your legacy systems to modern standards. Make your software future-proof."
   },
   {
-    icon: "/lovable-uploads/24f636f6-5e79-405b-8063-24ffa7a4a885.png",
+    icon: "/lovable-uploads/929eb487-796b-440d-99e3-207478a63c6b.png",
     title: "Software Consulting",
     description: "Get expert advice to make smart technology choices for your business."
   },
   {
-    icon: "/lovable-uploads/d29314d9-5a68-488b-b9b9-f2a5e94521e0.png",
+    icon: "/lovable-uploads/67efc73a-3f76-4140-ba70-3e62583df30a.png",
     title: "MVP Development",
-    description: "We do this by launching the most crucial features of your product that will help validate the market."
+    description: "Launch the most crucial features of your product to validate the market."
   },
   {
-    icon: "/lovable-uploads/1186c029-8b3a-484d-ab5b-fdc26fec5927.png",
+    icon: "/lovable-uploads/28f75365-7c1f-422c-805d-c69791caca8b.png",
     title: "Application Development",
     description: "Develop intuitive products that make real problems go away."
-  },
-  {
-    icon: "/lovable-uploads/4b1b4fc5-2ff5-47bb-996b-f4941ae90398.png",
-    title: "Data Development",
-    description: "Develop smart secure databases to handle your data. The decisions are easy, just as everything is perfectly organized."
   }
 ];
 
@@ -107,6 +101,9 @@ const ServicesGrid = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">IT Services</h2>
           <p className="text-gray-600 max-w-3xl mx-auto">
             Whether it's system integration, network security, cloud services, or software development, we make sure your business runs smoothly, effectively, and safely.
+          </p>
+          <p className="text-gray-600 max-w-3xl mx-auto mt-4">
+            Our extensive experience and dedication to quality enables us to help businesses like yours utilize technology for lasting growth and success. Collaborate with us to create a robust IT infrastructure that enhances productivity and keeps you ahead of your competitors.
           </p>
         </motion.div>
 

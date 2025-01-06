@@ -26,8 +26,8 @@ const Header = () => {
   return (
     <header className="bg-[#1A1F2C]">
       <nav className="container mx-auto">
-        {/* Top Navigation */}
-        <div className="hidden md:flex justify-end py-2 space-x-4 bg-[#1A1F2C]">
+        {/* Top Navigation - Reduced spacing */}
+        <div className="hidden md:flex justify-end py-1 space-x-4 bg-[#1A1F2C]">
           {menuItems.map((item) => (
             <a
               key={item.label}
@@ -39,18 +39,18 @@ const Header = () => {
           ))}
         </div>
 
-        {/* Main Navigation */}
-        <div className="flex items-center justify-between py-2 border-t border-gray-700">
+        {/* Main Navigation - Increased logo size */}
+        <div className="flex items-center justify-between py-1 border-t border-gray-700">
           <Link to="/" className="flex items-center">
             <img
               src="/lovable-uploads/94226ab9-122b-4ace-b2e0-2c4ca37d51c4.png"
               alt="Raastas Logo"
-              className="h-48 w-auto object-contain" // Increased height even more
+              className="h-52 w-auto object-contain" // Increased height even more
             />
           </Link>
 
-          {/* Desktop Bottom Navigation */}
-          <div className="hidden md:flex items-center space-x-4">
+          {/* Desktop Bottom Navigation - Reduced spacing */}
+          <div className="hidden md:flex items-center space-x-4 mt-0">
             {bottomMenuItems.map((item) => (
               <div key={item.label} className="relative group">
                 <button className="flex items-center text-white hover:text-raastas-light transition-colors">
@@ -80,7 +80,7 @@ const Header = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden py-4 space-y-4"
+            className="md:hidden py-2 space-y-2"
           >
             {[...menuItems, ...bottomMenuItems].map((item) => (
               <a
