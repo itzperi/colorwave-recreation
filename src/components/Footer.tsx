@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -11,7 +12,13 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
             className="col-span-1"
           >
-            <img src="/lovable-uploads/94226ab9-122b-4ace-b2e0-2c4ca37d51c4.png" alt="Nimais Logo" className="h-16 mb-6" /> {/* Increased height from h-8 to h-16 */}
+            <Link to="/">
+              <img 
+                src="/lovable-uploads/94226ab9-122b-4ace-b2e0-2c4ca37d51c4.png" 
+                alt="Raastas Logo" 
+                className="h-40 w-auto mb-6" // Increased height to match header
+              />
+            </Link>
             <p className="text-sm mb-4">
               At Raastas, we are neuromarketing experts offering comprehensive digital marketing services to accelerate your business growth. By combining neuroscience insights with proven strategies, we enhance engagement, drive conversions, and build brand loyalty. Our services include SEO, content creation, data analytics, and tailored solutions. Additionally, we provide IT solutions, making us your all-in-one partner for digital success.
             </p>

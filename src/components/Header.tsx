@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,9 +25,9 @@ const Header = () => {
 
   return (
     <header className="bg-[#1A1F2C]">
-      <nav className="container mx-auto px-6">
+      <nav className="container mx-auto">
         {/* Top Navigation */}
-        <div className="hidden md:flex justify-end py-2 space-x-8">
+        <div className="hidden md:flex justify-end py-2 space-x-8 bg-[#1A1F2C]">
           {menuItems.map((item) => (
             <a
               key={item.label}
@@ -39,14 +40,14 @@ const Header = () => {
         </div>
 
         {/* Main Navigation */}
-        <div className="flex items-center justify-between py-4 border-t border-gray-700">
-          <div className="flex items-center">
+        <div className="flex items-center justify-between py-2 border-t border-gray-700">
+          <Link to="/" className="flex items-center">
             <img
               src="/lovable-uploads/94226ab9-122b-4ace-b2e0-2c4ca37d51c4.png"
-              alt="Nimais Logo"
-              className="h-32 w-auto" // Increased height from h-24 to h-32
+              alt="Raastas Logo"
+              className="h-40 w-auto object-contain" // Increased height significantly
             />
-          </div>
+          </Link>
 
           {/* Desktop Bottom Navigation */}
           <div className="hidden md:flex items-center space-x-8">

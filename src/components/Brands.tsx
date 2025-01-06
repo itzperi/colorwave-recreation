@@ -1,5 +1,6 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 const Brands = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -7,18 +8,19 @@ const Brands = () => {
   const mouseY = useMotionValue(0);
 
   const brands = [
-    // Existing brands
-    { src: "/lovable-uploads/544d7b65-566b-4657-a223-29c08cdfafb4.png", alt: "Brand X" },
-    { src: "/lovable-uploads/8d50e6d3-810f-4689-9d54-2875a51187b0.png", alt: "Netflix" },
-    { src: "/lovable-uploads/957c2345-68ab-4378-bddd-dd7f3cc7f558.png", alt: "HBO" },
-    { src: "/lovable-uploads/fd72e4f1-e0eb-4484-9c43-6d7e9837d1ca.png", alt: "PayPal" },
-    { src: "/lovable-uploads/0e89f90f-2ae2-416c-944b-6bcce2838119.png", alt: "Nike" },
-    // New brands
-    { src: "/lovable-uploads/94226ab9-122b-4ace-b2e0-2c4ca37d51c4.png", alt: "Brand 13" },
-    { src: "/lovable-uploads/b1b642fb-86fd-47e6-a90e-c1f83b2ce4e5.png", alt: "Brand 14" },
-    { src: "/lovable-uploads/c0490498-6065-453f-a000-fad9b611cb92.png", alt: "Brand 15" },
-    { src: "/lovable-uploads/e96bb06b-a586-4c54-9ef3-ee7dc12d7e8a.png", alt: "Brand 17" },
-    { src: "/lovable-uploads/f5d4da2e-dcd4-4a71-b23d-9352a2ce365e.png", alt: "Brand 18" },
+    { src: "/lovable-uploads/6a665c82-e1b5-4a2a-92d5-e98d0d1832f3.png", alt: "Coca Cola" },
+    { src: "/lovable-uploads/fd7d4c92-d17e-458f-8a8f-ba5dba61be45.png", alt: "Pepsico" },
+    { src: "/lovable-uploads/e9726c56-58b7-4419-bb92-f4b21fd6185e.png", alt: "Mercedes" },
+    { src: "/lovable-uploads/61b3d4ea-ecec-4771-9f5d-79050ff76b91.png", alt: "Google" },
+    { src: "/lovable-uploads/91818578-1edd-4f4e-a886-310e4b209260.png", alt: "Apple" },
+    { src: "/lovable-uploads/12f6417f-995d-4fc4-8ab5-259ade5c8d40.png", alt: "Microsoft" },
+    { src: "/lovable-uploads/51d06bcd-6e45-4339-8c0c-eb052669d55e.png", alt: "Pepsi" },
+    { src: "/lovable-uploads/64f88510-c64c-447a-936e-93fe17d091c6.png", alt: "Hyundai" },
+    { src: "/lovable-uploads/69543e03-8cae-405f-828d-78f87b3a3f26.png", alt: "X" },
+    { src: "/lovable-uploads/9fa01c18-82d3-499e-9ecd-a03ddc5864b6.png", alt: "Netflix" },
+    { src: "/lovable-uploads/392160ea-cb64-41a3-8f33-daf05f12b51b.png", alt: "HBO" },
+    { src: "/lovable-uploads/be559ba5-9f9d-4605-908a-eaaa678ee2dd.png", alt: "PayPal" },
+    { src: "/lovable-uploads/33bfbc95-383e-4493-924c-54561be850b6.png", alt: "Nike" },
   ];
 
   useEffect(() => {
@@ -50,12 +52,12 @@ const Brands = () => {
         >
           <motion.div 
             className="flex space-x-40 items-center" // Increased gap between brands
-            animate={{ x: [0, -2400] }} // Increased animation width for more brands
+            animate={{ x: [0, -3000] }} // Increased animation width for more brands
             transition={{
               x: {
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: 40, // Slower animation
+                duration: 50, // Slower animation
                 ease: "linear",
               },
             }}
@@ -65,18 +67,24 @@ const Brands = () => {
               const y = useSpring(useTransform(mouseY, [0, 1000], [0, 30]));
 
               return (
-                <motion.div
+                <Link
                   key={`${brand.alt}-${index}`}
-                  style={{ x, y }}
-                  whileHover={{ scale: 1.1 }}
-                  className="w-48 md:w-56 h-32 flex-shrink-0" // Increased size
+                  to="/explore"
+                  className="block"
                 >
-                  <img
-                    src={brand.src}
-                    alt={brand.alt}
-                    className="w-full h-full object-contain"
-                  />
-                </motion.div>
+                  <motion.div
+                    style={{ x, y }}
+                    whileHover={{ scale: 1.1 }}
+                    className="w-48 md:w-56 h-32 flex-shrink-0" // Increased size
+                  >
+                    <img
+                      src={brand.src}
+                      alt={brand.alt}
+                      className="w-full h-full object-contain"
+                      loading="lazy" // Add lazy loading for better performance
+                    />
+                  </motion.div>
+                </Link>
               );
             })}
           </motion.div>
