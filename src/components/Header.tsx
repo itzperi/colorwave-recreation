@@ -27,7 +27,7 @@ const Header = () => {
     <header className="bg-[#1A1F2C]">
       <nav className="container mx-auto">
         {/* Top Navigation */}
-        <div className="hidden md:flex justify-end py-2 space-x-8 bg-[#1A1F2C]">
+        <div className="hidden md:flex justify-end py-2 space-x-4 bg-[#1A1F2C]">
           {menuItems.map((item) => (
             <a
               key={item.label}
@@ -45,12 +45,12 @@ const Header = () => {
             <img
               src="/lovable-uploads/94226ab9-122b-4ace-b2e0-2c4ca37d51c4.png"
               alt="Raastas Logo"
-              className="h-40 w-auto object-contain" // Increased height significantly
+              className="h-48 w-auto object-contain" // Increased height even more
             />
           </Link>
 
           {/* Desktop Bottom Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-4">
             {bottomMenuItems.map((item) => (
               <div key={item.label} className="relative group">
                 <button className="flex items-center text-white hover:text-raastas-light transition-colors">
