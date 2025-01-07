@@ -113,30 +113,35 @@ const ServicesSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 px-5 py-5">IT Services</h2>
-          <p className="text-gray-600 max-w-3xl mx-auto pz-5">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">IT Services</h2>
+          <p className="text-gray-600 max-w-3xl mx-auto">
             Whether it's system integration, network security, cloud services, or software development, we make sure your business runs smoothly, effectively, and safely.
           </p>
-          <p className="text-gray-600 max-w-3xl mx-auto mt-4 pz-5">
+          <p className="text-gray-600 max-w-3xl mx-auto mt-4">
             Our extensive experience and dedication to quality enables us to help businesses like yours utilize technology for lasting growth and success. Collaborate with us to create a robust IT infrastructure that enhances productivity and keeps you ahead of your competitors.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ delay: index * 0.05 }}
               className="p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow"
             >
-              <div className="flex items-start gap-4">
-                <img src={service.icon} alt={service.title} className="w-12 h-12" />
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                  <p className="text-gray-600">{service.description}</p>
+              <div className="flex flex-col items-center text-center">
+                <div className="w-16 h-16 mb-4">
+                  <img 
+                    src={service.icon} 
+                    alt={service.title} 
+                    className="w-full h-full object-contain"
+                    loading="lazy" 
+                  />
                 </div>
+                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                <p className="text-gray-600">{service.description}</p>
               </div>
             </motion.div>
           ))}
