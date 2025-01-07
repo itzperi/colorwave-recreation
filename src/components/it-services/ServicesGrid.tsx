@@ -113,7 +113,7 @@ const ServicesGrid = () => {
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ delay: index * 0.05 }} {/* Reduced delay for smoother animation with many cards */}
               className="p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow"
             >
               <div className="flex flex-col items-center text-center">
