@@ -9,6 +9,7 @@ import MarketingAgency from "./pages/MarketingAgency";
 import ITServices from "./pages/ITServices";
 import StrategicMarketing from "./pages/services/StrategicMarketing";
 import B2BMarketing from "./pages/services/B2BMarketing";
+import InnovativeMarketing from "./pages/services/InnovativeMarketing";
 import CustomizedCampaigns from "./pages/services/b2b-services/CustomizedCampaigns";
 import LeadNurturing from "./pages/services/b2b-services/LeadNurturing";
 import GreaterCredibility from "./pages/services/b2b-services/GreaterCredibility";
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/it-services" element={<ITServices />} />
           <Route path="/services/strategic-marketing" element={<StrategicMarketing />} />
           <Route path="/services/b2b-marketing" element={<B2BMarketing />} />
+          <Route path="/services/innovative-marketing" element={<InnovativeMarketing />} />
           <Route path="/services/b2b-marketing/customized-campaigns" element={<CustomizedCampaigns />} />
           <Route path="/services/b2b-marketing/lead-nurturing" element={<LeadNurturing />} />
           <Route path="/services/b2b-marketing/greater-credibility" element={<GreaterCredibility />} />
