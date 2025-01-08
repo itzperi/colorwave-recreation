@@ -8,6 +8,7 @@ import CreativeSolutions from "./pages/CreativeSolutions";
 import MarketingAgency from "./pages/MarketingAgency";
 import ITServices from "./pages/ITServices";
 import StrategicMarketing from "./pages/services/StrategicMarketing";
+import B2BMarketing from "./pages/services/B2BMarketing";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/marketing-agency" element={<MarketingAgency />} />
           <Route path="/it-services" element={<ITServices />} />
           <Route path="/services/strategic-marketing" element={<StrategicMarketing />} />
+          <Route path="/services/b2b-marketing" element={<B2BMarketing />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
