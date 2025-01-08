@@ -1,27 +1,32 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const B2BMarketingContent = () => {
   const services = [
     {
       title: "Customized Campaigns",
       description: "Create personalized strategies that speak directly to your target audience.",
-      image: "/lovable-uploads/52f10db3-a233-4ba9-b476-f62188eb573a.png"
+      image: "/lovable-uploads/52f10db3-a233-4ba9-b476-f62188eb573a.png",
+      link: "/services/b2b-marketing/customized-campaigns"
     },
     {
       title: "Lead Nurturing",
       description: "Help potential customers move from initial interest to loyal clients. We help build trust and maintain relationships through consistent, targeted messaging that nurtures leads effectively.",
-      image: "/lovable-uploads/9f659de8-659a-495c-920a-e9de0d778968.png"
+      image: "/lovable-uploads/9f659de8-659a-495c-920a-e9de0d778968.png",
+      link: "/services/b2b-marketing/lead-nurturing"
     },
     {
       title: "Greater Credibility",
       description: "Build trust with industry-specific content and testimonials that your audience will relate to. Get your business position as a trusted partner in your field",
-      image: "/lovable-uploads/9f659de8-659a-495c-920a-e9de0d778968.png"
+      image: "/lovable-uploads/9f659de8-659a-495c-920a-e9de0d778968.png",
+      link: "/services/b2b-marketing/greater-credibility"
     },
     {
       title: "Account-Based Marketing (ABM)",
       description: "Focus your efforts on high-value accounts with personalized outreach for better results. Turn business relationships into growth opportunities!",
-      image: "/lovable-uploads/9f659de8-659a-495c-920a-e9de0d778968.png"
+      image: "/lovable-uploads/9f659de8-659a-495c-920a-e9de0d778968.png",
+      link: "/services/b2b-marketing/account-based-marketing"
     }
   ];
 
@@ -41,10 +46,13 @@ const B2BMarketingContent = () => {
             <div className="flex-1">
               <h2 className="text-3xl font-bold mb-4">{service.title}</h2>
               <p className="text-gray-600 mb-4">{service.description}</p>
-              <button className="mt-6 bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors inline-flex items-center gap-2">
-                Get Started Today
+              <Link 
+                to={service.link}
+                className="mt-6 bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors inline-flex items-center gap-2"
+              >
+                Learn More
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </Link>
             </div>
             <div className="flex-1">
               <img

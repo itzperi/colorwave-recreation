@@ -9,6 +9,10 @@ import MarketingAgency from "./pages/MarketingAgency";
 import ITServices from "./pages/ITServices";
 import StrategicMarketing from "./pages/services/StrategicMarketing";
 import B2BMarketing from "./pages/services/B2BMarketing";
+import CustomizedCampaigns from "./pages/services/b2b-services/CustomizedCampaigns";
+import LeadNurturing from "./pages/services/b2b-services/LeadNurturing";
+import GreaterCredibility from "./pages/services/b2b-services/GreaterCredibility";
+import AccountBasedMarketing from "./pages/services/b2b-services/AccountBasedMarketing";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +29,10 @@ const App = () => (
           <Route path="/it-services" element={<ITServices />} />
           <Route path="/services/strategic-marketing" element={<StrategicMarketing />} />
           <Route path="/services/b2b-marketing" element={<B2BMarketing />} />
+          <Route path="/services/b2b-marketing/customized-campaigns" element={<CustomizedCampaigns />} />
+          <Route path="/services/b2b-marketing/lead-nurturing" element={<LeadNurturing />} />
+          <Route path="/services/b2b-marketing/greater-credibility" element={<GreaterCredibility />} />
+          <Route path="/services/b2b-marketing/account-based-marketing" element={<AccountBasedMarketing />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
