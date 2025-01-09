@@ -34,9 +34,10 @@ const Brands = () => {
         transition={{ duration: 0.8 }}
         className="container mx-auto px-4"
       >
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 max-w-2xl mx-auto">
-          Trusted by Leading Brands
-        </h2>
+        <div className="text-2xl md:text-3xl font-bold text-center mb-8 max-w-2xl mx-auto">
+          <div>These Brands have experienced</div>
+          <div>the proven effectiveness of neuromarketing with measurable outcomes.</div>
+        </div>
         
         <div 
           ref={containerRef}
