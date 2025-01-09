@@ -34,11 +34,39 @@ const Footer = () => {
             </div>
           </motion.div>
 
-          {/* About Us */}
+          {/* Our Core Services */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
+            className="space-y-6"
+          >
+            <h3 className="text-xl font-semibold">Our Core Services</h3>
+            <div className="grid grid-cols-1 gap-3">
+              {[
+                "Marketing",
+                "Design",
+                "Advertising",
+                "Neuromarketing",
+                "Website & App",
+                "Software",
+                "Sales & Leads",
+                "Communications",
+                "Services"
+              ].map((service, index) => (
+                <div key={index} className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors">
+                  <span className="text-raastas-light">→</span>
+                  <a href="#">{service}</a>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* About Us */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
             className="space-y-6"
           >
             <h3 className="text-xl font-semibold">About us</h3>
@@ -64,35 +92,29 @@ const Footer = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-            className="space-y-6"
-          >
-            <h3 className="text-xl font-semibold">Legal & Resources</h3>
-            <div className="grid grid-cols-1 gap-3">
-              {[
-                "Terms & Conditions",
-                "Privacy Policy",
-                "Accessibility Statement",
-                "Sitemap",
-                "Articles & Blogs",
-                "News"
-              ].map((item, index) => (
-                <div key={index} className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors">
-                  <span className="text-raastas-light">→</span>
-                  <a href="#">{item}</a>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Social, Newsletter, and CTA Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
             className="space-y-8"
           >
-            {/* Connect with us - Left */}
+            <div className="space-y-6">
+              <h3 className="text-xl font-semibold">Legal & Resources</h3>
+              <div className="grid grid-cols-1 gap-3">
+                {[
+                  "Terms & Conditions",
+                  "Privacy Policy",
+                  "Accessibility Statement",
+                  "Sitemap",
+                  "Articles & Blogs",
+                  "News"
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors">
+                    <span className="text-raastas-light">→</span>
+                    <a href="#">{item}</a>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Connect with us */}
             <div className="space-y-4">
               <h3 className="text-xl font-semibold">Connect with us</h3>
               <div className="flex space-x-6">
@@ -111,7 +133,7 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Newsletter Signup - Center */}
+            {/* Newsletter Signup */}
             <div className="space-y-4">
               <h3 className="text-xl font-semibold">Newsletter Signup</h3>
               <p className="text-sm text-gray-300">Stay updated with the latest insights and offers</p>
@@ -127,7 +149,7 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Ready to Grow - Right */}
+            {/* Ready to Grow */}
             <div className="space-y-3 pt-4">
               <h3 className="text-xl font-semibold">Ready to grow your business?</h3>
               <Button 
