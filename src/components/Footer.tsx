@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Button } from "./ui/button";
 
 const Footer = () => {
   return (
@@ -16,7 +18,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/94226ab9-122b-4ace-b2e0-2c4ca37d51c4.png" 
                 alt="Raastas Logo" 
-                className="h-40 w-auto mb-6" // Increased height to match header
+                className="h-40 w-auto mb-6"
               />
             </Link>
             <p className="text-sm mb-4">
@@ -50,7 +52,15 @@ const Footer = () => {
             className="space-y-4"
           >
             <h3 className="text-xl font-semibold mb-6">About us</h3>
-            {["Our Values", "Our Brands", "Our Team", "Career", "Our Industries", "Certifications", "Our Success Stories"].map((item, index) => (
+            {[
+              "Our core values",
+              "Our brands",
+              "Our expert team",
+              "Career opportunities",
+              "Industries we serve",
+              "Certifications & Awards",
+              "Client success stories"
+            ].map((item, index) => (
               <div key={index} className="flex items-center space-x-2">
                 <span>→</span>
                 <a href="#" className="hover:text-raastas-light transition-colors">{item}</a>
@@ -62,10 +72,18 @@ const Footer = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
+            className="space-y-8"
           >
-            <div className="space-y-4 mb-8">
-              <h3 className="text-xl font-semibold mb-6">Resources</h3>
-              {["Article & Blogs", "News"].map((item, index) => (
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold mb-6">Legal & Resources</h3>
+              {[
+                "Terms & Conditions",
+                "Privacy Policy",
+                "Accessibility Statement",
+                "Sitemap",
+                "Articles & Blogs",
+                "News"
+              ].map((item, index) => (
                 <div key={index} className="flex items-center space-x-2">
                   <span>→</span>
                   <a href="#" className="hover:text-raastas-light transition-colors">{item}</a>
@@ -74,13 +92,43 @@ const Footer = () => {
             </div>
             
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold mb-6">Legal</h3>
-              {["Terms & Conditions", "Privacy Policy"].map((item, index) => (
-                <div key={index} className="flex items-center space-x-2">
-                  <span>→</span>
-                  <a href="#" className="hover:text-raastas-light transition-colors">{item}</a>
-                </div>
-              ))}
+              <h3 className="text-xl font-semibold">Connect with us</h3>
+              <div className="flex space-x-4">
+                <a href="#" className="hover:text-raastas-light transition-colors">
+                  <Linkedin className="w-6 h-6" />
+                </a>
+                <a href="#" className="hover:text-raastas-light transition-colors">
+                  <Instagram className="w-6 h-6" />
+                </a>
+                <a href="#" className="hover:text-raastas-light transition-colors">
+                  <Facebook className="w-6 h-6" />
+                </a>
+                <a href="#" className="hover:text-raastas-light transition-colors">
+                  <Twitter className="w-6 h-6" />
+                </a>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold">Newsletter Signup</h3>
+              <p className="text-sm">Stay updated with the latest insights and offers</p>
+              <div className="flex gap-2">
+                <input 
+                  type="email" 
+                  placeholder="Enter your email" 
+                  className="px-4 py-2 rounded bg-white/10 text-white placeholder:text-white/60 flex-1"
+                />
+                <Button variant="outline" className="whitespace-nowrap">
+                  Subscribe Now
+                </Button>
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <h3 className="text-xl font-semibold">Ready to grow your business?</h3>
+              <Button variant="outline" className="w-full">
+                Contact us today!
+              </Button>
             </div>
           </motion.div>
         </div>
